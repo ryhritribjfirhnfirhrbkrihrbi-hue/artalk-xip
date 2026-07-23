@@ -1,0 +1,54 @@
+{
+  "name": "@artalk/plugin-lightbox",
+  "version": "0.2.5",
+  "license": "MIT",
+  "description": "The image lightbox plugin for artalk",
+  "type": "module",
+  "main": "./dist/artalk-plugin-lightbox.js",
+  "module": "./dist/artalk-plugin-lightbox.mjs",
+  "types": "./dist/artalk-plugin-lightbox.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@artalk/plugin-kit": "workspace:^",
+    "artalk": "workspace:^",
+    "fancybox": "^3.0.1",
+    "lightbox2": "^2.12.0",
+    "lightgallery": "^2.9.0",
+    "photoswipe": "^5.4.4"
+  },
+  "peerDependencies": {
+    "artalk": "workspace:^",
+    "fancybox": "^3.0.1",
+    "lightbox2": "^2.12.0",
+    "lightgallery": "^2.9.0",
+    "photoswipe": "^5.4.4"
+  },
+  "peerDependenciesMeta": {
+    "lightgallery": {
+      "optional": true
+    },
+    "lightbox2": {
+      "optional": true
+    },
+    "photoswipe": {
+      "optional": true
+    },
+    "fancybox": {
+      "optional": true
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/artalk-plugin-lightbox.d.ts",
+      "import": "./dist/artalk-plugin-lightbox.mjs",
+      "require": "./dist/artalk-plugin-lightbox.cjs"
+    }
+  }
+}

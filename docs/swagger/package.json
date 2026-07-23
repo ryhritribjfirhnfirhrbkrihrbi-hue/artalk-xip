@@ -1,0 +1,21 @@
+{
+  "name": "docs-swagger",
+  "version": "2.0.0",
+  "description": "Artalk documentation",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtalkJS/Artalk",
+    "directory": "docs/swagger"
+  },
+  "private": true,
+  "scripts": {
+    "swagger:build": "redocly build-docs --output ./dist/http-api.html",
+    "swagger:serve": "redocly preview",
+    "swagger:build-http-client": "swagger-typescript-api generate -n v2 -p ./swagger.json -o ../../ui/artalk/src/api --responses --sort-types && pnpm --dir ../.. exec prettier --write --ignore-path /dev/null --no-semi ui/artalk/src/api/v2.ts"
+  },
+  "devDependencies": {
+    "@redocly/cli": "2.40.0",
+    "swagger-typescript-api": "13.12.6"
+  }
+}

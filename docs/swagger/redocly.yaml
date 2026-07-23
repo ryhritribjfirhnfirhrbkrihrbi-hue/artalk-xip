@@ -1,0 +1,18 @@
+extends:
+  - recommended
+
+apis:
+  artalk@v2:
+    root: ./swagger.json
+
+openapi:
+  schemasExpansionLevel: 2
+  codeSamples:
+    languages:
+      - lang: curl
+      - lang: Python
+      - lang: Go
+      - lang: Node.js
+      - lang: JavaScript
+      - lang: PHP
+      - lang: Java
